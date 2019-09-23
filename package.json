@@ -12,6 +12,7 @@
     "build": "tsc",
     "test": "jest",
     "test:codecov": "jest --coverage",
+    "postinstall": "tsc",
     "doc": "typedoc"
   },
   "repository": {
