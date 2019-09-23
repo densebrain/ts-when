@@ -18,6 +18,23 @@ describe("`when()` syntax with a simple return-type", () => {
   });
 });
 
+describe("`when()` syntax with fn test", () => {
+  const getDrinkPrice = (drink: "Pepsi" | "Coke" | "Orangina"): number =>
+    when(drink)
+      .is((val) => val === "Coke", 1.5)
+      .is("Pepsi", 1.8)
+      .else(2.0);
+
+  it("should return value if matches an expression", () => {
+    expect(getDrinkPrice("Coke")).toEqual(1.5);
+    expect(getDrinkPrice("Pepsi")).toEqual(1.8);
+  });
+
+  it("should return default value if no match", () => {
+    expect(getDrinkPrice("Orangina")).toEqual(2.0);
+  });
+});
+
 describe("`when()` syntax with a union return-type", () => {
   const getDrinkPrice = (drink: "Pepsi" | "Coke" | "Orangina") =>
     when(drink)

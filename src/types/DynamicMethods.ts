@@ -1,8 +1,12 @@
 import { DynamicWhenOrElse } from "./DynamicWhen";
 import { Matcher } from "./Matcher";
 
-export type DynamicIs<T, V> = <U extends T, W>(
-  matcher: U,
+export type Predicate<T> = (input: T) => boolean;
+
+export type Input<T> = T | Predicate<T>;
+
+export type DynamicIs<T, V> = <U, W>(
+  matcher: Input<T | U>,
   value: ((inputValue: U) => W) | W,
 ) => DynamicWhenOrElse<T, V | W>;
 
