@@ -1,5 +1,5 @@
 {
-  "name": "ts-when",
+  "name": "@densebrain/ts-when",
   "version": "0.5.1",
   "description": "JavaScript functional implementation of switch/case written in TypeScript",
   "main": "./lib/when.js",
@@ -9,14 +9,16 @@
     "!/**/__tests__"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -b",
+    "build:watch": "tsc -b -w",
     "test": "jest",
     "test:codecov": "jest --coverage",
-    "doc": "typedoc"
+    "doc": "typedoc",
+    "prepublish": "yarn run build && yarn run doc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nawordar/ts-when.git"
+    "url": "git+https://github.com/densebrain/ts-when.git"
   },
   "keywords": [
     "util",
@@ -31,9 +33,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nawordar/ts-when/issues"
+    "url": "https://github.com/densebrain/ts-when/issues"
   },
-  "homepage": "https://github.com/nawordar/ts-when#readme",
+  "homepage": "https://github.com/densebrain/ts-when#readme",
   "devDependencies": {
     "@types/jest": "^24.0.0",
     "intspector": "^1.0.1",

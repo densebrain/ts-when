@@ -1,3 +1,5 @@
+*** THIS IS A FORK - ALL CREDIT GOES TO THE AUTHOR NAWORDAR - I WILL EVENTUALLY DO A PR TO SYNC ***
+
 [![CircleCI](https://circleci.com/gh/nawordar/ts-when.svg?style=shield)](https://circleci.com/gh/nawordar/ts-when)
 [![codecov](https://codecov.io/gh/nawordar/ts-when/branch/master/graph/badge.svg)](https://codecov.io/gh/nawordar/ts-when)
 [![Maintainability](https://api.codeclimate.com/v1/badges/acbaf24c14a3478dc54b/maintainability)](https://codeclimate.com/github/nawordar/ts-when/maintainability)
